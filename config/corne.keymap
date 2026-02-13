@@ -60,7 +60,7 @@
 
             bindings = <
 &kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+&kp LCTRL  &trans    &trans  &trans    &to 4     &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
 &kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
                              &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
             >;
@@ -72,6 +72,15 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &kp C_AL_SCREENSAVER  &kp PAGE_UP  &kp PAGE_DOWN  &trans   &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans                &kp HOME     &kp END        &trans   &trans   &trans
                         &trans  &trans  &trans    &trans                &trans       &trans
+            >;
+        };
+
+        layer_num {
+            bindings = <
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans
+&trans  &trans        &trans        &trans        &to 0         &trans          &trans        &trans        &trans        &trans        &trans        &trans
+&trans  &trans        &trans        &trans        &trans        &trans          &trans        &trans        &trans        &trans        &trans        &trans
+                                    &trans        &trans        &trans          &trans        &trans        &trans
             >;
         };
     };
