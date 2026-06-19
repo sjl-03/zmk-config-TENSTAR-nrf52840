@@ -13,7 +13,7 @@
         compatible = "zmk,combos";
 
         toggle3 {
-            bindings = <&mo 3>;
+            bindings = <&mo 4>;
             key-positions = <37 40>;
         };
     };
@@ -84,7 +84,16 @@
 &kp TAB         &kp Q                &kp W            &kp E            &kp R                   &kp T        &kp Y    &kp U                    &kp I             &kp O             &kp P                    &kp BSPC
 &kp LCTRL       &HML LEFT_CONTROL A  &HML LEFT_ALT S  &HML LEFT_GUI D  &HMShiftL LEFT_SHIFT F  &kp G        &kp H    &HMShiftR RIGHT_SHIFT J  &HMR RIGHT_GUI K  &HMR RIGHT_ALT L  &HMR RIGHT_CONTROL SEMI  &kp SQT
 &kp LEFT_SHIFT  &kp Z                &kp X            &kp C            &kp V                   &kp B        &kp N    &kp M                    &kp COMMA         &kp DOT           &kp FSLH                 &kp ESC
-                                                      &kp LGUI         &mo 1                   &kp SPACE    &kp RET  &mo 2                    &kp RIGHT_SHIFT
+                                                      &kp LGUI         &mo 2                   &kp SPACE    &kp RET  &mo 3                    &kp RIGHT_SHIFT
+            >;
+        };
+
+        Windows_base {
+            bindings = <
+&kp TAB    &kp Q            &kp W            &kp E         &kp R              &kp T        &kp Y      &kp U               &kp I            &kp O             &kp P                &kp BSPC
+&kp LGUI   &HML LEFT_GUI A  &HML LEFT_ALT S  &HML LCTRL D  &HML LEFT_SHIFT F  &kp G        &kp H      &HML RIGHT_SHIFT J  &HML RCTRL K     &HML RIGHT_ALT L  &HML RIGHT_GUI SEMI  &kp APOS
+&kp LSHFT  &kp Z            &kp X            &kp C         &kp V              &kp B        &kp N      &kp M               &kp COMMA        &kp DOT           &kp FSLH             &kp ESC
+                                             &kp LCTRL     &mo 2              &kp SPACE    &kp ENTER  &mo 3               &kp RIGHT_SHIFT
             >;
         };
 
@@ -97,7 +106,7 @@
 
             bindings = <
 &kp TAB           &kp N1        &kp N2        &kp N3        &kp N4        &kp N5        &kp N6      &kp N7           &kp N8             &kp N9     &kp N0  &kp BSPC
-&kp LEFT_CONTROL  &kp CAPS      &trans        &trans        &trans        &tog 5        &kp LEFT    &kp DOWN         &kp UP             &kp RIGHT  &trans  &trans
+&kp LEFT_CONTROL  &kp CAPS      &trans        &trans        &trans        &tog 1        &kp LEFT    &kp DOWN         &kp UP             &kp RIGHT  &trans  &trans
 &kp LSHFT         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR    &kp C_MUTE  &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &trans     &trans  &trans
                                               &kp LGUI      &trans        &kp SPACE     &kp RET     &trans           &kp RALT
             >;
@@ -112,18 +121,18 @@
 
             bindings = <
 &kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &trans    &trans  &trans    &tog 3    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+&kp LCTRL  &trans    &trans  &trans    &tog 4    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
 &kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &tog 4    &kp SPACE    &kp RET    &trans     &kp RALT
+                             &kp LGUI  &tog 5    &kp SPACE    &kp RET    &trans     &kp RALT
             >;
         };
 
-        layer_3 {
+        Function_layer {
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7                &kp F8       &kp F9         &kp F10  &kp F11  &kp F12
 &trans  &trans  &trans  &trans  &trans  &trans    &kp C_AL_SCREENSAVER  &kp PAGE_UP  &kp PAGE_DOWN  &trans   &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans                &kp HOME     &kp END        &trans   &trans   &trans
-                        &trans  &tog 3  &trans    &trans                &tog 3       &trans
+                        &trans  &tog 4  &trans    &trans                &tog 4       &trans
             >;
         };
 
@@ -132,16 +141,7 @@
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans
 &trans  &trans        &trans        &trans        &to 0         &trans          &trans        &trans        &trans        &trans        &trans        &trans
 &trans  &trans        &trans        &trans        &trans        &trans          &trans        &trans        &trans        &trans        &trans        &trans
-                                    &trans        &tog 4        &trans          &trans        &tog 4        &trans
-            >;
-        };
-
-        layer_5 {
-            bindings = <
-&kp TAB    &kp Q            &kp W            &kp E         &kp R              &kp T        &kp Y      &kp U               &kp I            &kp O             &kp P                &kp BSPC
-&kp LGUI   &HML LEFT_GUI A  &HML LEFT_ALT S  &HML LCTRL D  &HML LEFT_SHIFT F  &kp G        &kp H      &HML RIGHT_SHIFT J  &HML RCTRL K     &HML RIGHT_ALT L  &HML RIGHT_GUI SEMI  &kp APOS
-&kp LSHFT  &kp Z            &kp X            &kp C         &kp V              &kp B        &kp N      &kp M               &kp COMMA        &kp DOT           &kp FSLH             &kp ESC
-                                             &kp LCTRL     &mo 1              &kp SPACE    &kp ENTER  &mo 2               &kp RIGHT_SHIFT
+                                    &trans        &tog 5        &trans          &trans        &tog 5        &trans
             >;
         };
     };
